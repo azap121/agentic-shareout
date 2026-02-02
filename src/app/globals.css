@@ -1,0 +1,220 @@
+@import "tailwindcss";
+
+/* ============================================
+   AGENTIC DESIGN SHARE OUT
+   Based on Datasite Rebrand Design System
+   ============================================ */
+
+/* Custom Font Faces */
+@font-face {
+  font-family: 'TT Hoves Pro';
+  src: url('/TT_Hoves_Pro_VF_Trial.woff') format('woff');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Hoves Pro';
+  src: url('/TT Hoves Pro Trial DemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Hoves Pro Mono';
+  src: url('/TT_Hoves_Pro_Mono_VF_Trial.woff') format('woff');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AL Sigla';
+  src: url('/ALSiglaTrial-Book.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AL Sigla';
+  src: url('/ALSiglaTrial-Neretta.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* CSS Variables */
+:root {
+  color-scheme: dark;
+  
+  --font-hoves: 'TT Hoves Pro', system-ui, sans-serif;
+  --font-hoves-mono: 'TT Hoves Pro Mono', 'SF Mono', Consolas, monospace;
+  --font-sigla: 'AL Sigla', Georgia, serif;
+
+  /* Brand Colors */
+  --color-brand-orange: #FF6B00;
+  --color-brand-orange-light: #FF8534;
+  --color-brand-teal: #0D9488;
+
+  /* Dark Mode (locked) */
+  --color-background: #0C0A09;
+  --color-surface: #1C1917;
+  --color-surface-elevated: #292524;
+  --color-text-primary: #FAFAF9;
+  --color-text-secondary: #D6D3D1;
+  --color-text-tertiary: #A8A29E;
+  --color-border: #292524;
+  --color-border-subtle: #1C1917;
+}
+
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-hoves);
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography Utilities */
+.font-sans { font-family: var(--font-hoves); }
+.font-serif { font-family: var(--font-sigla); }
+.font-mono { font-family: var(--font-hoves-mono); }
+
+/* Editorial Number Styling */
+.editorial-number {
+  font-family: var(--font-sigla);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-brand-orange) 0%, var(--color-brand-orange-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass Effect - Dark Mode Only */
+.glass {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Animations */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes countPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+@keyframes spinSlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 4s linear infinite;
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s ease-out forwards;
+}
+
+.animate-count-pulse {
+  animation: countPulse 1s ease-in-out;
+}
+
+/* Stagger Animation Delays */
+.stagger-1 { animation-delay: 0.1s; opacity: 0; }
+.stagger-2 { animation-delay: 0.2s; opacity: 0; }
+.stagger-3 { animation-delay: 0.3s; opacity: 0; }
+.stagger-4 { animation-delay: 0.4s; opacity: 0; }
+.stagger-5 { animation-delay: 0.5s; opacity: 0; }
+.stagger-6 { animation-delay: 0.6s; opacity: 0; }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-border-subtle);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-text-tertiary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-secondary);
+}
+
+/* Selection */
+::selection {
+  background: var(--color-brand-orange);
+  color: white;
+}
+
+/* Focus Styles */
+*:focus-visible {
+  outline: 2px solid var(--color-brand-orange);
+  outline-offset: 2px;
+}
+
+/* Orange Glow Effect */
+.orange-glow {
+  box-shadow: 0 0 60px rgba(255, 107, 0, 0.3),
+              0 0 120px rgba(255, 107, 0, 0.15);
+}
+
+/* Micro Label */
+.micro-label {
+  font-family: var(--font-hoves-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-tertiary);
+}

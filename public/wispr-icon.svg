@@ -1,0 +1,17 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="48" height="48" rx="12" fill="#0D1117"/>
+  <path d="M8 28C12 22 16 26 20 24C24 22 28 18 32 22C36 26 40 24 44 20" stroke="url(#wispr-gradient)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M8 34C12 28 16 32 20 30C24 28 28 24 32 28C36 32 40 30 44 26" stroke="url(#wispr-gradient2)" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+  <defs>
+    <linearGradient id="wispr-gradient" x1="8" y1="24" x2="44" y2="24" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6366F1"/>
+      <stop offset="0.5" stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#D946EF"/>
+    </linearGradient>
+    <linearGradient id="wispr-gradient2" x1="8" y1="30" x2="44" y2="30" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6366F1"/>
+      <stop offset="0.5" stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#D946EF"/>
+    </linearGradient>
+  </defs>
+</svg>
