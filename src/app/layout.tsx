@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Agentic Design Share Out",
-  description: "A perspective on a builders' AI workflow, open for discussion. Product × Design × Engineering.",
+  description: "A perspective on a builders' AI workflow. Product × Design × Engineering.",
 };
 
 export default function RootLayout({
