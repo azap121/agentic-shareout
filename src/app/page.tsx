@@ -408,7 +408,7 @@ export default function Home() {
                 Share Out
               </h1>
               <p className="text-base sm:text-lg" style={{ color: 'var(--color-text-secondary)' }}>
-                A perspective on builders&apos; AI workflow, open for discussion
+                A perspective on a builders&apos; AI workflow, open for discussion
               </p>
             </header>
           </RevealOnScroll>
